@@ -1,0 +1,32 @@
+{
+  "name": "get-evernote-titles-2025-05-16",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teracodedev/get-evernote-titles-2025-05-16.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teracodedev/get-evernote-titles-2025-05-16/issues"
+  },
+  "homepage": "https://github.com/teracodedev/get-evernote-titles-2025-05-16#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.18",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "open": "^10.1.2"
+  }
+}
