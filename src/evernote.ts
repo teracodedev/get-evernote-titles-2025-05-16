@@ -1,8 +1,7 @@
-
 import express from "express";
 import axios from "axios";
-import open from "open";
 import dotenv from "dotenv";
+import opener from "opener";
 dotenv.config();
 
 const CLIENT_ID = process.env.EVERNOTE_CLIENT_ID!;
@@ -81,7 +80,11 @@ export async function startOAuthFlow() {
   app.listen(3000, () => {
     console.log("ローカルサーバー起動: http://localhost:3000/callback で待機中");
     console.log("ブラウザが開きます。Evernoteにログインして認証してください。");
-    // 3. ブラウザで認証URLを開く
-    open(authUrl);
+    try {
+      opener(authUrl);
+    } catch (err) {
+      console.error("ブラウザを開けませんでした:", err);
+      console.log("以下のURLを手動でブラウザにコピーしてください:", authUrl);
+    }
   });
 }
